@@ -1,8 +1,7 @@
-# Twitter Clone
+# DashNote
 
 Recreating the Twitter website
 
-[Demo](https://tweeeterclone.herokuapp.com/)
 
 ## Getting started
 

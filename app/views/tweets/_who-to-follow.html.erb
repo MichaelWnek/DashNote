@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+<div class="column">
+	<nav class="panel">
+		<p class="panel-heading"><%= link_to "Who to Follow", users_path %></p>
+
+	<div class="panel-block">
+		<article class="media">
+			<div class="media-left">
+				<% @users.first(3).each do |user| %>
+				  <figure class="image is-32x32">
+					<%= gravatar_image_tag(user.email, size: 32) %>
+				  </figure>
+				<% end %>
+			</div>
+			<div class="media-content">
+				<div class="content">
+					<% @users.first(3).each do |user| %>
+						<p> <%= link_to user.name, user %> </p>
+					<% end %>
+				</div>
+			</div>
+		</article>
+	</div>
+<% end %>
